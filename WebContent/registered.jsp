@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,14 +7,32 @@
 <title>Registered</title>
 </head>
 <body>
-<pre>
-Hello your data has been saved temporarily >> 1 hour cut-off (Server Memory.)
-We have sent you an email to verify your email address.
-You must click on the link in the email to complete your registration.
-<code>
-int x = 7;
-String str = "HelloWorld";
-</code>
-</pre>
+	Hello
+	<%=request.getSession().getAttribute("firstName") %>
+	<br> Welcome to the website.
+	<br> Personal Data:
+	<table border="1">
+		<tr>
+			<td>First Name:</td>
+			<td><%=request.getSession().getAttribute("firstName") %></td>
+		</tr>
+		<tr>
+			<td>Last Name:</td>
+			<td><%=request.getSession().getAttribute("lastName") %></td>
+		</tr>
+		<tr>
+			<td>E-mail:</td>
+			<td><%=request.getSession().getAttribute("email") %></td>
+		</tr>
+		<tr>
+			<td>Password:</td>
+			<td><%=request.getSession().getAttribute("password") %></td>
+		</tr>
+		<tr>
+			<td>Mobile:</td>
+			<td><%=request.getSession().getAttribute("mobile") %></td>
+		</tr>
+
+	</table>
 </body>
 </html>

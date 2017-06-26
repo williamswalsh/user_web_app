@@ -26,7 +26,7 @@ public ArrayList<String> displayErrors(HttpSession session){
 	Please enter your details.
 	<br>If you have an account already you can login
 	<a href="login.jsp">here</a>
-	<form action="register" method="POST">
+	<form action="controller/register" method="POST">
 		<table>
 			<tr>
 				<td>First Name:</td>

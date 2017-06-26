@@ -23,7 +23,7 @@ public String displayErrorText(HttpSession session){
 	
 	If you don't have an account then you can register
 	<a href="register.jsp">here</a>
-	<form action="login" method="POST">
+	<form action="controller/login" method="POST">
 		<table>
 			<tr>
 				<td>E-mail:</td>

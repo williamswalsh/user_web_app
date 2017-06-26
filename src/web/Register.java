@@ -51,21 +51,21 @@ public class Register extends HttpServlet {
 
 	public boolean addUserToDB(SessionFactory sf, UserInfo user){
 		Session dbSession = null;
-		boolean success = false;
+		boolean successful = false;
 		try{
 			dbSession = sf.openSession();
 			dbSession.beginTransaction();
 			dbSession.save(user);
 			dbSession.getTransaction().commit();
-			success = true;
+			successful = true;
 		}catch(Exception e){
-			success = false;	//Necessary?
+			successful = false;	//Necessary?
 			e.printStackTrace();
 			dbSession.getTransaction().rollback();
 		}finally{
 			dbSession.close();
 		}
-		return success;
+		return successful;
 	}
 
 	public boolean isValidMobile(String mobile){
@@ -92,7 +92,7 @@ public class Register extends HttpServlet {
 		return isValidName(request.getParameter("lastName"));
 	}
 	public boolean verifyUserEmail(HttpServletRequest request){
-		return isValidName(request.getParameter("email"));
+		return isValidEmail(request.getParameter("email"));
 	}
 	
 	public ArrayList<String> verifyUserInput(HttpServletRequest request){
@@ -103,19 +103,21 @@ public class Register extends HttpServlet {
 			if(errors == null){
 				errors = new ArrayList<String>();
 			}
-			errors.add("User first name is invalid");
+			errors.add("User first name is invalid like a boss!!!!");
 		}
+		
 		if( !verifyUserLastName(request) ){
 			if(errors == null){
 				errors = new ArrayList<String>();
 			}
 			errors.add("User last name is invalid");
 		}
+		
+		
 		if( !verifyUserEmail(request) ){
 			if(errors == null){
 				errors = new ArrayList<String>();
-			}
-			errors.add("User first name is invalid");
+			}errors.add("User first name is invalid");
 		}
 		return errors;
 	}
@@ -146,6 +148,13 @@ public class Register extends HttpServlet {
 			user.setMobile(mobile);
 			user.setPassword(password);
 			user.setEmail(email);
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("firstName", firstName);
+			session.setAttribute("lastName", lastName);
+			session.setAttribute("email", email);
+			session.setAttribute("mobile", mobile);
+			session.setAttribute("password", password);
 		}
 		return user;
 	}
