@@ -1,3 +1,13 @@
+/**
+ * Title:			Register.java
+ * @author			William Walsh
+ * @version			1.0
+ * @since			28-6-2017
+ * 
+ * Purpose:			This is the servlet which contains the business logic for registering the user to the site.
+ * 					This servlet checks if the user is already registered and if not registers the data within the database.
+ * 					The controller will forward the HTTP request and response to this Servlet if the request path contains the URL-mapping for this Servlet.
+ * */
 package web;
 
 import java.io.IOException;
@@ -16,7 +26,7 @@ import org.hibernate.cfg.Configuration;
 
 import dto.UserInfo;
 
-@WebServlet(description = "This is the servlet that checks if the  is already a registered  "
+@WebServlet(description = "This is the servlet that checks if the user is already a registered user "
 							+ "and if not registers the data within the database.", urlPatterns = { "/register" })
 public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;

@@ -1,3 +1,10 @@
+<%-- 
+ Title:			success.jsp
+ @author		William Walsh
+ @version		1.0
+ @since			28-6-2017
+ Purpose:		If the user successfully logs into the site they will be forwarded to this resource.
+--%>
 <%@ page 	import="dto.UserInfo" 
 			language="java"
 			contentType="text/html; charset=UTF-8"

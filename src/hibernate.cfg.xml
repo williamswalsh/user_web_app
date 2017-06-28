@@ -7,7 +7,6 @@
 
 		<property name=""></property>
 		
-		
 		<!-- Database Connection Settings -->		 
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/user</property>

@@ -1,3 +1,10 @@
+<%-- 
+ Title:			registered.jsp
+ @author		William Walsh
+ @version		1.0
+ @since			28-6-2017
+ Purpose:		If the user successfully registers with the site they will be forwarded to this resource.
+--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>

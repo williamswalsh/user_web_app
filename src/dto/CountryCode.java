@@ -1,3 +1,11 @@
+/**
+ * Title:			CountryCode.java
+ * @author			William Walsh
+ * @version			1.0
+ * @since			28-6-2017
+ * Purpose:			CountryCode is a class used to store data about a countries mobile extension.
+ * 					It contains a String of the Country and a integer of the number extension itself.
+ * */
 package dto;
 
 public class CountryCode {

@@ -1,3 +1,10 @@
+/**
+ * Title:			Controller.java
+ * @author			William Walsh
+ * @version			1.0
+ * @since			28-6-2017
+ * Purpose:			This is the Controller in my MVC paradigm. It will process request and forward users to appropriate resources.
+ * */
 package web;
 
 import java.io.IOException;

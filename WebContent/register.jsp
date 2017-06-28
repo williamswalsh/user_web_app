@@ -1,3 +1,10 @@
+<%-- 
+ Title:			register.jsp
+ @author		William Walsh
+ @version		1.0
+ @since			28-6-2017
+ Purpose:		This is a jsp page which allow the user to enter their credentials in order to register to the site. 
+--%>
 <%@ page import="dto.UserInfo,java.util.ArrayList" language="java"
 	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

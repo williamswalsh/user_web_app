@@ -1,3 +1,10 @@
+/**
+ * Title:			UserInfo.java
+ * @author			William Walsh
+ * @version			1.0
+ * @since			28-6-2017
+ * Purpose:			UserInfo is a class which stores contact details about a user of a Website.
+ * */
 package dto;
 
 import javax.persistence.Column;

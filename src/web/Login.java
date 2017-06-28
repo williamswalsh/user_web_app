@@ -1,7 +1,13 @@
+/**
+ * Title:			Login.java
+ * @author			William Walsh
+ * @version			1.0
+ * @since			28-6-2017
+ * Purpose:			This is the Servlet which contains the business logic for logging the user into the site with the supplied credentials.
+ * 					The controller will forward the HTTP request and response to this Servlet if the request path contains the URL-mapping for this Servlet.
+ * */
 package web;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
