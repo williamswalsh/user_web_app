@@ -90,10 +90,6 @@ public class Register extends HttpServlet {
 		return email.contains("@");	
 	}
 	
-	public void isValidMobile(){
-		
-	}
-	
 	public boolean verifyUserFirstName(HttpServletRequest request){
 		return isValidName(request.getParameter("firstName"));
 	}
