@@ -3,8 +3,10 @@
  * @author			William Walsh
  * @version			1.0
  * @since			28-6-2017
- * Purpose:			This is the Servlet which contains the business logic for logging the user into the site with the supplied credentials.
- * 					The controller will forward the HTTP request and response to this Servlet if the request path contains the URL-mapping for this Servlet.
+ * Purpose:			This is the Servlet which contains the business logic for logging the user into the site 
+ * 				with the supplied credentials.
+ * 				The controller will forward the HTTP request and response to this Servlet 
+ *				if the request path contains the URL-mapping for this Servlet.
  * */
 package web;
 
@@ -124,46 +126,5 @@ public class Login extends HttpServlet {
 			getServletContext().getRequestDispatcher("/register.jsp").forward(request, response);
 			return;
 		}
-
-		// if yes
-		// Check if password in DB matches entered password
-
-		// if yes
-		// Allow into site to view their confidential data >> redirect to their
-		// home page
-		// if not
-		// Redirect user to login jsp with error that password is incorrect
-
-		/*
-		 * try { response.setContentType("text/html"); PrintWriter p =
-		 * response.getWriter();
-		 * 
-		 * p.println("<html><body>"); p.print("Hello " + email);
-		 * p.print("your password is " + password);
-		 * 
-		 * 
-		 * UserInfo u = null;
-		 * 
-		 * // Hibernate exists() function?? >> tests whether class exists as //
-		 * record in table try { // if(exists(email)){retrieve} dbSession =
-		 * sf.openSession(); dbSession.beginTransaction();
-		 * 
-		 * if (dbSession.get(UserInfo.class, email) == null) {
-		 * 
-		 * getServletContext().getRequestDispatcher("/login.jsp").forward(
-		 * request, response);
-		 * 
-		 * } else { u = (UserInfo) dbSession.get(UserInfo.class, email);
-		 * System.out.println(u.getEmail());
-		 * System.out.println(u.getFirstName());
-		 * System.out.println(u.getPassword()); } } catch (Exception e) {
-		 * dbSession.getTransaction().rollback(); } finally { dbSession.close();
-		 * } // Does email and hashed password match hashed password of email //
-		 * record in DB // If yes forward/redirect to successful page //
-		 * Otherwise redirect to login with error message
-		 * 
-		 * p.println("</body></html>"); p.close(); } catch (Exception e) {
-		 * e.printStackTrace(); }
-		 */
 	}
 }
